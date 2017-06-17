@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>购买点卡</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <style>
+      .mma{width: 95%;margin: 15px auto;height: 200px;background: #66cc99;font-size: 14px;}
+      .mmb{width: 95%;margin: 15px auto;height: 200px;background: #ff9966;font-size: 14px;}
+      .mmc{width: 95%;margin: 15px auto;height: 200px;background: #ff6699;font-size: 14px;}
+      .mmd{width: 95%;margin: 15px auto;height: 200px;background: #6699ff;font-size: 14px;}
+      .mmcz p{color: #fff;padding: 20px 20px 0 0;float:right;}
+      .mmcz img{float:left;margin-top: 20px}
+    </style>
+</head>
+<body>
+<ul class="mmcz">
+  <li class="mma" onclick="openframe()">
+    <img src="../image/300.png" />
+    <p>充值：300元<br>赠送：0U<br>可获得：300U<br>可充值棋牌房卡300张</p>
+  </li>
+  <li class="mmb" onclick="openframe()">
+    <img src="../image/900.png" />
+    <p>充值：900元<br>赠送：100U<br>可获得：1000U<br>可充值棋牌房卡1000张</p>
+  </li>
+  <li class="mmc" onclick="openframe()">
+    <img src="../image/1500.png" />
+    <p>充值：1500元<br>赠送：500U<br>可获得：2000U<br>可充值棋牌房卡2000张</p>
+  </li>
+  <li class="mmd" onclick="openframe()">
+    <img src="../image/3000.png" />
+    <p>充值：3000元<br>赠送：2000U<br>可获得：5000U<br>可充值棋牌房卡5000张</p>
+  </li>
+</ul>
+
+<script type="text/javascript">
+	apiready = function(){
+		openframe();
+	}
+	function openframe(){
+		api.openFrame({
+	        name: 'dialog',
+	        url: '../html/zf3000.html',
+	        rect: {
+		        x:0,
+		        y:0,
+		        w:api.winWidth,
+		        h:api.winHeight
+	        },
+	        bgColor: 'rgba(0,0,0,0.6)',
+			bounces: false
+        });
+	}
+
+</script>
+</body>
+</html>
